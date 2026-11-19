@@ -1,0 +1,85 @@
+/* Orange-Yellow Glow Theme - COMPLETE COLOR SYSTEM */
+
+:root {
+  /* Primary Color Palette */
+  --glow-lightest: #FFF9C4;
+  --glow-light: #FFE082;
+  --glow-medium: #FFCA28;
+  --glow-bright: #FFB300;
+  --glow-deep: #F57C00;
+
+  /* Text Colors */
+  --text-primary: #3E2723;
+  --text-secondary: #5D4037;
+  --text-on-dark: #FFFFFF;
+
+  /* Global Radial Gradient Background */
+  --global-background: radial-gradient(circle at center,
+    #FFF9C4 0%,
+    #FFE082 25%,
+    #FFCA28 50%,
+    #FFB300 75%,
+    #F57C00 100%
+  );
+
+  /* Button Gradient */
+  --button-gradient: linear-gradient(135deg, #FFB300 0%, #FFCA28 50%, #FFE082 100%);
+
+  /* Glass Effect */
+  --glass-background: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.3);
+
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(245, 124, 0, 0.15);
+  --shadow-medium: 0 8px 30px rgba(245, 124, 0, 0.25);
+  --shadow-strong: 0 12px 40px rgba(245, 124, 0, 0.35);
+}
+
+/* Global Background Application */
+body {
+  background: var(--global-background);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+#root {
+  background: transparent;
+}
+
+/* Glass Card Style */
+.glass-card {
+  background: var(--glass-background);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Button Style */
+.glow-button {
+  background: var(--button-gradient);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.glow-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  filter: brightness(1.1);
+}
+
+/* Section Transparent Backgrounds */
+.section-transparent {
+  background: transparent;
+}
+
+.section-light-blend {
+  background: rgba(255, 255, 255, 0.05);
+}
